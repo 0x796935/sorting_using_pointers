@@ -9,8 +9,6 @@
 int main(){
     using std::chrono::high_resolution_clock;
     using std::chrono::duration_cast;
-    using std::chrono::duration;
-    using std::chrono::milliseconds;
 
     srand (time(NULL));
     int n = 100;
@@ -33,9 +31,7 @@ int main(){
     std::cout << "Sorted array: ";
     s.printArray(arr, n);
 
-    std::cout << "Bubble t1: " << bubble_t1.time_since_epoch().count() << "\n";
-    std::cout << "Bubble t2: " << bubble_t2.time_since_epoch().count() << "\n";
-    std::cout << "Bubble diff: " << bubble_t2.time_since_epoch().count() - bubble_t1.time_since_epoch().count() << "ms \n\n";
+    std::cout << "Bubblesort time taken: " << bubble_t2.time_since_epoch().count() - bubble_t1.time_since_epoch().count() << "ms \n\n";
 
 
     std::cout << "Quick sort:\nUnsorted array: ";
@@ -48,9 +44,7 @@ int main(){
     std::cout << "Sorted array: ";
     s.printArray(arr2, n);
 
-    std::cout << "Quick t1: " << quick_t1.time_since_epoch().count() << "\n";
-    std::cout << "Quick t2: " << quick_t2.time_since_epoch().count() << "\n";
-    std::cout << "Quick diff: " << quick_t2.time_since_epoch().count() - quick_t1.time_since_epoch().count() << "ms \n";
+    std::cout << "Quicksort time taken: " << quick_t2.time_since_epoch().count() - quick_t1.time_since_epoch().count() << "ms \n";
 
     return 0;
 }
