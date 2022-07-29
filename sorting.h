@@ -6,7 +6,7 @@
 //for timestamping:
 #include <chrono>
 
-class sorting {
+class cSorting {
     public:
         void bubbleSort(int *arr, int n);
         void quickSort(int *arr, int n, int left, int right);
@@ -16,7 +16,7 @@ class sorting {
         int partition(int *arr, int n, int left, int right, int &pivot);
 };
 
-void sorting::bubbleSort(int *arr, int n){
+void cSorting::bubbleSort(int *arr, int n){
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n - i - 1; j++){
             if(arr[j] > arr[j + 1]){
@@ -26,7 +26,7 @@ void sorting::bubbleSort(int *arr, int n){
     }
 }
 
-void sorting::quickSort(int *arr, int n, int left, int right){
+void cSorting::quickSort(int *arr, int n, int left, int right){
     if(left < right){
         int pivot = partition(arr, n, left, right, pivot);
         quickSort(arr, n, left, pivot - 1);
@@ -34,7 +34,7 @@ void sorting::quickSort(int *arr, int n, int left, int right){
     }
 }
 
-int sorting::partition(int *arr, int n, int left, int right, int &pivot){
+int cSorting::partition(int *arr, int n, int left, int right, int &pivot){
     pivot = left;
     int i = left + 1;
     int j = right;
@@ -57,14 +57,14 @@ int sorting::partition(int *arr, int n, int left, int right, int &pivot){
 }
 
 
-void sorting::printArray(int *arr, int n){
+void cSorting::printArray(int *arr, int n){
     for(int i = 0; i < n; i++){
         std::cout << arr[i] << " ";
     }
     std::cout << "\n";
 }
 
-void sorting::swap(int *a, int *b){
+void cSorting::swap(int *a, int *b){
     int temp = *a;
     *a = *b;
     *b = temp;
