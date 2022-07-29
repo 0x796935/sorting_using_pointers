@@ -1,5 +1,11 @@
 #include <iostream>
 
+#include <stdlib.h>
+#include <time.h>
+
+//for timestamping:
+#include <chrono>
+
 class sorting {
     public:
         void bubbleSort(int *arr, int n);

@@ -1,9 +1,3 @@
-#include <stdlib.h>
-#include <time.h>
-
-//for timestamping:
-#include <chrono>
-
 #include "sorting.h"
 
 int main(){
